@@ -1,15 +1,13 @@
-//const ldap = require("ldapjs");
 import NextAuth, { Session } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 //import GithubProvider from "next-auth/providers/github";
-//import { PrismaAdapter } from "@next-auth/prisma-adapter";
+
 
 //import { PrismaClient } from "@prisma/client";
 //const prisma = new PrismaClient();
 import { prisma } from "@/app/_utils/prismaSingleton";
 
 const handler = NextAuth({
-	// CredentialsProviderの場合 adapter は使用できない模様。
 	//adapter: PrismaAdapter(prisma),
 	theme: {
 		colorScheme: "light",
