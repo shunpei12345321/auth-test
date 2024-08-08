@@ -6,7 +6,11 @@ First, run the development server:
 
 ```bash
 npm run dev
-npm migrate dev 
+npm migrate dev
+
+データベースを変更した後
+npx prisma migrate dev --name <マイグレーションに名前を付ける>
+npx prisma generate　★重要
 
 pnpm dev
 # or
