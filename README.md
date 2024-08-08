@@ -22,6 +22,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## npm
 ```bash
+npm install ts-node@latest
 npx prisma db seed
 npm i dayjs
 ```
