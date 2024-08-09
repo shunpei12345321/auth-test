@@ -35,6 +35,10 @@ export default async function Home() {
 			</div> */}
 
 			<div className={styles.grid}></div>
+			<p>
+				<br />
+				<br />
+			</p>
 		</main>
 	);
 }
