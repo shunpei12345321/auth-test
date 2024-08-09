@@ -22,7 +22,7 @@ export const mainMenu = (
 				<ListItemIcon>
 					<DashboardIcon />
 				</ListItemIcon>
-				<ListItemText primary="ThanksCard" />
+				<ListItemText primary="Home" />
 			</ListItemButton>
 		</Link>
 		<Link href="/user" passHref>
@@ -41,7 +41,7 @@ export const mainMenu = (
 				<ListItemText primary="Header Items Form" />
 			</ListItemButton>
 		</Link>
-		<Link href="/header-items-list" passHref>
+		{/* <Link href="/header-items-list" passHref>
 			<ListItemButton>
 				<ListItemIcon>
 					<BarChartIcon />
@@ -56,32 +56,33 @@ export const mainMenu = (
 				</ListItemIcon>
 				<ListItemText primary="Revalidate Data" />
 			</ListItemButton>
-		</Link>
-		<Link href="/revalidate-data-custom-hook" passHref>
+		</Link> */}
+		{/* <Link href="/revalidate-data-custom-hook" passHref>
 			<ListItemButton>
 				<ListItemIcon>
 					<BarChartIcon />
 				</ListItemIcon>
 				<ListItemText primary="Revalidate Data Custom Hook" />
 			</ListItemButton>
-		</Link>
-		<Link href="/file-uploader" passHref>
+		</Link> */}
+		{/* file-uppuloader */}
+		{/* <Link href="/file-uploader" passHref>
 			<ListItemButton>
 				<ListItemIcon>
 					<LayersIcon />
 				</ListItemIcon>
 				<ListItemText primary="file-uploader" />
 			</ListItemButton>
-		</Link>
+		</Link> */}
 		<Link href="/camera-photo-uploader" passHref>
 			<ListItemButton>
 				<ListItemIcon>
 					<CameraIcon />
 				</ListItemIcon>
-				<ListItemText primary="camera-photo-uploader" />
+				<ListItemText primary="camera-photo" />
 			</ListItemButton>
 		</Link>
-		{/* QRコード関連 */}
+		{/*qr-code-reader:QRコード関連 */}
 		{/* <Link href='/qr-code-reader' passHref>
       <ListItemButton>
         <ListItemIcon>
@@ -106,7 +107,7 @@ export const mainMenu = (
 				<ListItemText primary="ActiveReports" />
 			</ListItemButton>
 		</Link>
-		<Link href="/leader-line" passHref>
+		{/* <Link href="/leader-line" passHref>
 			<ListItemButton>
 				<ListItemIcon>
 					<LineAxisIcon />
@@ -129,7 +130,7 @@ export const mainMenu = (
 				</ListItemIcon>
 				<ListItemText primary="InfinityScroll" />
 			</ListItemButton>
-		</Link>
+		</Link> */}
 	</React.Fragment>
 );
 
@@ -150,11 +151,11 @@ export const secondaryMenu = (
 			</ListItemIcon>
 			<ListItemText primary="Secondary Menu 2" />
 		</ListItemButton>
-		<ListItemButton>
+		{/* <ListItemButton>
 			<ListItemIcon>
 				<AssignmentIcon />
 			</ListItemIcon>
 			<ListItemText primary="Secondary Menu 3" />
-		</ListItemButton>
+		</ListItemButton> */}
 	</React.Fragment>
 );

@@ -20,6 +20,7 @@ import Paper from "@mui/material/Paper";
 import Link from "@mui/material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import AccessAlarmIcon from "@mui/icons-material/AccessAlarm";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 
 // For DataPicker locale
@@ -31,6 +32,7 @@ import "dayjs/locale/ja";
 import { SessionProvider } from "next-auth/react";
 import { mainMenu, secondaryMenu } from "./Menu";
 import AccountInfo from "./AccountInfo";
+import { CheckBox } from "@mui/icons-material";
 
 /*
 import Chart from "./Chart";
@@ -46,9 +48,10 @@ function Copyright(props: any) {
 			align="center"
 			{...props}>
 			{"Copyright © "}
-			<Link color="inherit" href="https://mui.com/">
+			{"UEHARA "}{" "}
+			{/* <Link color="inherit" href="https://mui.com/">
 				Your Website
-			</Link>{" "}
+			</Link> */}
 			{new Date().getFullYear()}
 			{"."}
 		</Typography>
@@ -105,17 +108,16 @@ const Drawer = styled(MuiDrawer, {
 	},
 }));
 
+// ここでメインバーの色を調整
 const mdTheme = createTheme({
-	// /*
-	// palette: {
-	//   mode: "light",
-	//   primary: {
-	//     main: "#d87274",
-	//     light: "#ffa2a3",
-	//     dark: "#a34449",
-	//   },
-	// },
-	// */
+	palette: {
+		mode: "light",
+		primary: {
+			main: "#C4D872",
+			light: "#ffa2a3",
+			dark: "#a34449",
+		},
+	},
 });
 
 type LayoutProps = Required<{
@@ -132,14 +134,14 @@ export default function Layout({ children }: LayoutProps) {
 		<ThemeProvider theme={mdTheme}>
 			<Box sx={{ display: "flex" }}>
 				<CssBaseline />
-				<AppBar position="absolute" open={open}>
+				<AppBar className="absolute," open={open}>
 					<Toolbar
 						sx={{
 							pr: "24px", // keep right padding when drawer closed
 						}}>
 						<IconButton
 							edge="start"
-							color="inherit"
+							color="success"
 							aria-label="open drawer"
 							onClick={toggleDrawer}
 							sx={{
@@ -149,21 +151,26 @@ export default function Layout({ children }: LayoutProps) {
 							<MenuIcon />
 						</IconButton>
 						<Typography
+							className=""
 							component="h1"
 							variant="h6"
 							color="inherit"
 							noWrap
 							sx={{ flexGrow: 1 }}>
-							ThanksCard
+							〇〇〇〇アプリ
+							{/* ここがメインメニューバーTextの部分 */}
 						</Typography>
+
 						<SessionProvider>
+							{/* AccountInfoがメニューバーの情報 */}
 							<AccountInfo />
 						</SessionProvider>
-						<IconButton color="inherit">
+						{/* <IconButton color="inherit">
 							<Badge badgeContent={4} color="secondary">
 								<NotificationsIcon />
 							</Badge>
-						</IconButton>
+						</IconButton>  */}
+						{/* IconButtonがベルマーク */}
 					</Toolbar>
 				</AppBar>
 				<Drawer variant="permanent" open={open}>
@@ -179,9 +186,10 @@ export default function Layout({ children }: LayoutProps) {
 						</IconButton>
 					</Toolbar>
 					<Divider />
+					{/* サイドバー：List*/}
 					<List component="nav">
 						{mainMenu}
-						<Divider sx={{ my: 1 }} />
+						<Divider sx={{ my: 0 }} />
 						{secondaryMenu}
 					</List>
 				</Drawer>
@@ -190,24 +198,28 @@ export default function Layout({ children }: LayoutProps) {
 					sx={{
 						backgroundColor: (theme) =>
 							theme.palette.mode === "light"
-								? theme.palette.grey[100]
-								: theme.palette.grey[900],
+								? //　固定ページの背景
+								  theme.palette.grey[300]
+								: theme.palette.grey[400],
+						// 真ん中に表示している画面
 						flexGrow: 1,
 						height: "100vh",
-						overflow: "auto",
+						// overflow: "auto",  //overflowがスクロールバーのやつ
 					}}>
 					<Toolbar />
 					<Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-						<Grid container spacing={3}>
+						<Grid container spacing={10}>
 							{/* Chart */}
 							<Grid item xs={12} md={8} lg={18}>
+								{/* Paper：メイン画面の中 */}
 								<Paper
 									sx={{
 										p: 2,
 										display: "flex",
 										flexDirection: "column",
-										height: 600,
-										overflow: "auto", // for scrollable
+										height: 500, // 白色背景の高さ
+										overflow: "auto", //overflow:スクロールバーの設定
+										//for scrollable
 									}}>
 									<LocalizationProvider
 										dateAdapter={AdapterDayjs}

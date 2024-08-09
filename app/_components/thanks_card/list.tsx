@@ -43,12 +43,13 @@ function ThanksCardList(props: Props) {
 
 	return (
 		<TableContainer component={Paper}>
-			<Table sx={{ minWidth: 650 }} aria-label="simple table">
+			<Table sx={{ minWidth: 750 }} aria-label="simple table">
 				<TableHead>
 					<TableRow>
 						<TableCell>id</TableCell>
 						<TableCell>title</TableCell>
 						<TableCell>body</TableCell>
+						{/* 这边的fromto是谁送给谁 */}
 						<TableCell>from</TableCell>
 						<TableCell>to</TableCell>
 						<TableCell>createdAt</TableCell>
