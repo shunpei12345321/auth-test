@@ -12,46 +12,18 @@ export default async function Home() {
 	return (
 		<main className={styles.main}>
 			<div className={styles.description}>
-				<p>
+				{/* <p>
 					Get started by editing&nbsp;
 					<code className={styles.code}>app/page.tsx</code>
-				</p>
+				</p> */}
 				<div>
 					<ThanksCardList thanks_cards={thanks_cards} />
 				</div>
-				<div>
-					<ul>
-						<li>
-							<Link href="file-uploader" className="underline">
-								File Uploader
-							</Link>
-						</li>
-						<li>
-							<Link href="qr-code-reader" className="underline">
-								QR Code Reader
-							</Link>
-						</li>
-					</ul>
-				</div>
-				<div>
-					<a
-						href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-						target="_blank"
-						rel="noopener noreferrer">
-						By{" "}
-						<Image
-							src="/vercel.svg"
-							alt="Vercel Logo"
-							className={styles.vercelLogo}
-							width={100}
-							height={24}
-							priority
-						/>
-					</a>
-				</div>
+
+				<div></div>
 			</div>
 
-			<div className={styles.center}>
+			{/* <div className={styles.center}>
 				<Image
 					className={styles.logo}
 					src="/next.svg"
@@ -60,11 +32,9 @@ export default async function Home() {
 					height={37}
 					priority
 				/>
-			</div>
+			</div> */}
 
-			<div className={styles.grid}>
-				
-			</div>
+			<div className={styles.grid}></div>
 		</main>
 	);
 }
