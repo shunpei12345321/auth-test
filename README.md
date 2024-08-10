@@ -6,30 +6,37 @@ First, run the development server:
 
 ```bash
 npm run dev
-npm migrate dev 
+npm migrate dev
 
-pnpm dev
-# or
-bun dev
+データベースを変更した後
+npx prisma migrate dev --name <マイグレーションに名前を付ける>
+npx prisma generate　★重要
+
 ```
+
 - プリスマを使っている
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 -seed はまだ入っていない状態
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## npm
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install ts-node@latest
+npx prisma db seed
+npm i dayjs
+npm i swr
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# mui
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- @mui/icons-material,
+- @mui/material,
+- @mui/x-date-pickers:
 
+# git
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# auth-test
+- リモートの branch を消す方法
+  git push origin --d <branch 名>
