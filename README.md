@@ -17,9 +17,6 @@ npx prisma generate　★重要
 - プリスマを使っている
   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
--seed はまだ入っていない状態
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## npm
 
@@ -28,6 +25,7 @@ npm install ts-node@latest
 npx prisma db seed
 npm i dayjs
 npm i swr
+pull した後　npm install だけで　パッケージがインストールできた
 ```
 
 # mui
