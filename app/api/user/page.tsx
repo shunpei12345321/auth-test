@@ -1,7 +1,7 @@
 "use client";
 
 import useSWR from "swr";
-import { fetcher } from "../_utils/fetcher";
+import { fetcher } from "../../_utils/fetcher";
 useSWR;
 fetcher;
 
