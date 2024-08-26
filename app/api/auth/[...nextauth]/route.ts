@@ -2,7 +2,6 @@ import NextAuth, { Session } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 //import GithubProvider from "next-auth/providers/github";
 
-
 //import { PrismaClient } from "@prisma/client";
 //const prisma = new PrismaClient();
 import { prisma } from "@/app/_utils/prismaSingleton";
@@ -94,12 +93,12 @@ const handler = NextAuth({
 	},
 	secret: process.env.NEXTAUTH_SECRET,
 	// サインイン・サインアウトで飛ぶカスタムログインページを指定
-	/*
-    pages: {
-      signIn: "/login",
-      signOut: "/login",
-    },
-    */
+
+	// pages: {
+	// 	signIn: "/login",
+	// 	signOut: "/login",
+	// },
+
 	// Enable debug messages in the console if you are having problems
 	debug: process.env.NODE_ENV === "development",
 });

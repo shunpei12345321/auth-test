@@ -1,9 +1,6 @@
 import { prisma } from "../_utils/prismaSingleton";
 import type { Prisma } from "@prisma/client";
 import type { User as _User } from "@prisma/client";
-import { userAgent } from "next/server";
-
-prisma;
 
 export type User = _User;
 
