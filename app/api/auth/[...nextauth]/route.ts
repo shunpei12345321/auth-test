@@ -23,12 +23,13 @@ const handler = NextAuth({
 			name: "credentials",
 			credentials: {
 				email: {
-					label: "User email",
+					label: "User email111",
 					type: "text",
 					placeholder: "User email",
 				},
 				password: { label: "Password", type: "password" },
 			},
+			// rote.ts に直接書いてる」
 			authorize: async (credentials, req) => {
 				const user = await prisma.user.findFirst({
 					where: {

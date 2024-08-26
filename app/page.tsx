@@ -20,7 +20,7 @@ export default async function Home() {
 					<ThanksCardList thanks_cards={thanks_cards} />
 				</div>
 
-				<div></div>
+				<div>aaaaa</div>
 			</div>
 
 			{/* <div className={styles.center}>
