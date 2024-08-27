@@ -135,13 +135,13 @@ export default function UserForm(props: Props) {
 						required
 						defaultValue={user ? user.roleId : ""}
 						{...register("roleId")}>
-						{roles?.map((role) => {
+						{/* {roles?.map((role) => {
 							return (
 								<MenuItem key={role.id} value={role.id}>
 									{role.name}
 								</MenuItem>
 							);
-						})}
+						})} */}
 					</Select>
 					<FormHelperText error={true}>{errors.roleId?.message}</FormHelperText>
 				</FormControl>
@@ -152,13 +152,13 @@ export default function UserForm(props: Props) {
 						required
 						defaultValue={user ? user.departmentId : ""}
 						{...register("departmentId")}>
-						{departments?.map((department) => {
+						{/* {departments?.map((department) => {
 							return (
 								<MenuItem key={department.id} value={department.id}>
 									{department.name}
 								</MenuItem>
 							);
-						})}
+						})} */}
 					</Select>
 					<FormHelperText error={true}>
 						{errors.departmentId?.message}
