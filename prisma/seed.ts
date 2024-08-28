@@ -44,11 +44,11 @@ async function main() {
 	});
 	const now = new Date();
 	const admin = await prisma.user.upsert({
-		where: { email: "admin@sss.co.jp" },
+		where: { email: "admin@ts.occ.co.jp" },
 		update: {},
 		create: {
 			name: "admin",
-			email: "admin@sss.co.jp",
+			email: "admin@ts.occ.co.jp",
 			password: "admin",
 			joinningDate: now,
 			roleId: role_admin.id,
@@ -57,11 +57,11 @@ async function main() {
 	});
 
 	const user = await prisma.user.upsert({
-		where: { email: "user@sss.co.jp" },
+		where: { email: "user@ts.occ.co.jp" },
 		update: {},
 		create: {
 			name: "user",
-			email: "user@sss.co.jp",
+			email: "user@ts.occ.co.jp",
 			password: "user",
 			joinningDate: now,
 			roleId: role_user.id,

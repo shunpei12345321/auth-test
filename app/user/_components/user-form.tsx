@@ -18,23 +18,23 @@ import { mutate } from "swr";
 import { userFormSchema, UserFormData } from "@/app/_formSchema/user";
 
 import type { User } from "@/app/_repositories/User";
-// import type { Role } from '@/app/_repositories/Role';
-// import type { Department } from '@/app/_repositories/Department';
+import type { Role } from "@/app/_repositories/Role";
+import type { Department } from "@/app/_repositories/Department";
 import { DatePicker } from "@mui/x-date-pickers";
 import { DateTimePicker } from "@mui/x-date-pickers";
 import dayjs from "dayjs";
 
 type Props = {
 	user?: User | null;
-	// roles: Role[];
-	// departments: Department[];
+	roles: Role[];
+	departments: Department[];
 	onSuccessUrl: string;
 };
 
 export default function UserForm(props: Props) {
 	const user = props.user;
-	// const roles = props.roles;
-	// const departments = props.departments;
+	const roles = props.roles;
+	const departments = props.departments;
 	const onSuccessUrl = props.onSuccessUrl;
 
 	const router = useRouter();
@@ -135,13 +135,13 @@ export default function UserForm(props: Props) {
 						required
 						defaultValue={user ? user.roleId : ""}
 						{...register("roleId")}>
-						{/* {roles?.map((role) => {
+						{roles?.map((role) => {
 							return (
 								<MenuItem key={role.id} value={role.id}>
 									{role.name}
 								</MenuItem>
 							);
-						})} */}
+						})}
 					</Select>
 					<FormHelperText error={true}>{errors.roleId?.message}</FormHelperText>
 				</FormControl>
@@ -152,13 +152,13 @@ export default function UserForm(props: Props) {
 						required
 						defaultValue={user ? user.departmentId : ""}
 						{...register("departmentId")}>
-						{/* {departments?.map((department) => {
+						{departments?.map((department) => {
 							return (
 								<MenuItem key={department.id} value={department.id}>
 									{department.name}
 								</MenuItem>
 							);
-						})} */}
+						})}
 					</Select>
 					<FormHelperText error={true}>
 						{errors.departmentId?.message}

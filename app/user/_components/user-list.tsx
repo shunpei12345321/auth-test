@@ -16,24 +16,29 @@ import { useRouter } from "next/navigation";
 import { mutate } from "swr";
 
 import type { UserWithRoleDepartment } from "@/app/_repositories/User";
+import { idText } from "typescript";
 
 type Props = {
 	users: UserWithRoleDepartment[];
 };
 
 export default function UserList(props: Props) {
-	// スペルミス
 	const users = props.users;
 
 	const router = useRouter();
 
 	const onDelete = async (id: string) => {
-		const response = await fetch(`/api/user/{id}`, {
+		const response = await fetch(`/api/user/${id}`, {
 			method: "DELETE",
 		});
-		mutate("api/user");
+		mutate("/api/user");
 		router.refresh();
 	};
+
+	// 自分で追加したものしかけせない
+	//  DELETE /api/user/clzm0tb6x000am75pjg8ydpg4 　%78こういうエラーはフロント側
+	// ポイントを受け取るところ
+	// エンドポイントは　（"/api/user/"）
 
 	return (
 		<>

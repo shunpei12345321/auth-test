@@ -1,11 +1,11 @@
-import { prisma } from "../_utils/prismaSingleton";
+import { prisma } from "@/app/_utils/prismaSingleton";
 import type { Prisma } from "@prisma/client";
 import type { User as _User } from "@prisma/client";
 
 export type User = _User;
 
 export type UserWithRoleDepartment = Exclude<
-	Prisma.PromiseReturnType<typeof UserRepository.findUniqWithRoleDepartment>,
+	Prisma.PromiseReturnType<typeof UserRepository.findUniqueWithRoleDepartment>,
 	null
 >;
 
@@ -27,7 +27,7 @@ export namespace UserRepository {
 		});
 	}
 
-	export async function findUniqWithRoleDepartment(id: string) {
+	export async function findUniqueWithRoleDepartment(id: string) {
 		return await prisma.user.findUnique({
 			include: {
 				role: true,
@@ -38,6 +38,7 @@ export namespace UserRepository {
 			},
 		});
 	}
+
 	export async function create(user: User) {
 		return await prisma.user.create({
 			data: user,

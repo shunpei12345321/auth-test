@@ -31,7 +31,6 @@ export async function PUT(
 	}
 }
 
-// _repository　とつながている
 export async function DELETE(
 	request: NextRequest,
 	{ params }: { params: { id: string } }
