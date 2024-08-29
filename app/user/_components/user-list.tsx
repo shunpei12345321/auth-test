@@ -78,6 +78,7 @@ export default function UserList(props: Props) {
 											</Button>
 										</Link>
 									</TableCell>
+									<div></div>
 									<TableCell>
 										<Button
 											onClick={() => onDelete(user.id)}
