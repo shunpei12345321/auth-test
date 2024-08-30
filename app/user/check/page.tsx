@@ -9,7 +9,7 @@ import UserList from "@/app/user/_components/user-list";
 
 export default function UserPage() {
 	const { data: users } = useSWR<UserWithRoleDepartment[]>(
-		"/api/user",
+		"/api/user/",
 		fetcher
 	);
 

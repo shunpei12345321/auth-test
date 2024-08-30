@@ -1,27 +1,20 @@
-// import Image from "next/image";
-// import styles from "./page.module.css";
-// import Link from "next/link";
+"use client";
 
-// import ThanksCardList from "./_components/recipt-list";
-// import { ThanksCardRepository } from "@/app/_repositories/ThanksCard";
+//import { useEffect, useState } from 'react'
 
-// export const dynamic = "force-dynamic";
+import useSWR from "swr";
+import type { SWRConfiguration } from "swr";
 
-// export default async function Home() {
-// 	const thanks_cards = await ThanksCardRepository.findMany();
-// 	return (
-// 		<main className={styles.main}>
-// 			<div className={styles.description}>
-// 				{/* <p>
-// 					Get started by editing&nbsp;
-// 					<code className={styles.code}>app/page.tsx</code>
-// 				</p> */}
-// 				<div>
-// 					<ThanksCardList thanks_cards={thanks_cards} />
-// 				</div>
-// 			</div>
+import UserList from "@/app/user/_components/user-list";
+import type { UserWithRoleDepartment } from "@/app/_repositories/User";
+import { fetcher } from "@/app/_utils/fetcher";
 
-// 			<div className={styles.grid}></div>
-// 		</main>
-// 	);
-// }
+export default function RevalidateData() {
+	return (
+		<main>
+			<div>
+				<p>Revalidate Data</p>
+			</div>
+		</main>
+	);
+}

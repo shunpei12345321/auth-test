@@ -106,6 +106,7 @@ export default function UserForm(props: Props) {
 						variant="standard"
 						helperText={errors.name?.message}
 						{...register("name")}
+						// onsabumit のところ
 					/>
 				</FormControl>
 				<FormControl fullWidth error={"email" in errors}>
@@ -127,6 +128,7 @@ export default function UserForm(props: Props) {
 						{...register("password")}
 					/>
 				</FormControl>
+				<br />
 				<FormControl fullWidth error={"roleId" in errors}>
 					<InputLabel>Role</InputLabel>
 					<Select

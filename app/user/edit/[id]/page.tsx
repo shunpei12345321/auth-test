@@ -1,6 +1,6 @@
 "use client";
-
 import UserForm from "@/app/user/_components/user-form";
+// userform からインポート
 import type { UserWithRoleDepartment } from "@/app/_repositories/User";
 import type { Department } from "@/app/_repositories/Department";
 import type { Role } from "@/app/_repositories/Role";

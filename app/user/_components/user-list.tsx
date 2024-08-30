@@ -79,7 +79,6 @@ export default function UserList(props: Props) {
 											</Button>
 										</Link>
 									</TableCell>
-									<div></div>
 									<TableCell>
 										<Button
 											onClick={() => onDelete(user.id)}
@@ -87,6 +86,13 @@ export default function UserList(props: Props) {
 											color="warning">
 											Delete
 										</Button>
+									</TableCell>
+									<TableCell>
+										<Link href={`/user/check/${user.id}`} passHref>
+											<Button variant="contained" color="primary">
+												move
+											</Button>
+										</Link>
 									</TableCell>
 								</TableRow>
 							);
