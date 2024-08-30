@@ -48,7 +48,7 @@ export const mainMenu = (
 				</ListItemIcon>
 				<ListItemText primary="Header Items List" />
 			</ListItemButton>
-		</Link>
+		</Link> */}
 		<Link href="/revalidate-data" passHref>
 			<ListItemButton>
 				<ListItemIcon>
@@ -56,7 +56,7 @@ export const mainMenu = (
 				</ListItemIcon>
 				<ListItemText primary="Revalidate Data" />
 			</ListItemButton>
-		</Link> */}
+		</Link>
 		{/* <Link href="/camera-photo-uploader" passHref>
 			<ListItemButton>
 				<ListItemIcon>

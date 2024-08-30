@@ -31,6 +31,7 @@ export namespace UserRepository {
 		return await prisma.user.findUnique({
 			include: {
 				role: true,
+
 				department: true,
 			},
 			where: {

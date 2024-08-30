@@ -1,32 +1,33 @@
-import { prisma } from "@/app/_utils/prismaSingleton";
-import type { Prisma } from "@prisma/client";
+// import { prisma } from "@/app/_utils/prismaSingleton";
+// import type { Prisma } from "@prisma/client";
 
-export type ReciptWithFromTo = Exclude<
-	Prisma.PromiseReturnType<typeof ReciptRepository.findUnique>,
-	null
->;
+// // ThanksCardRepository.findUniq(ThanksCardとUser(from, to)をjoinした結果) が返すリストの型から
+// // Promise を取り省いた型を export する
+// export type ThanksCardWithFromTo = Exclude<
+// 	Prisma.PromiseReturnType<typeof ThanksCardRepository.findUnique>,
+// 	null
+// >;
+// // promis がaysinc await の代わり 8.30
 
-export namespace ReciptRepository {
-	export async function findMany() {
-		return await prisma.thanksCard.findMany({
-			include: {
-				from: true,
-				to: true,
-			},
-		});
-	}
+// export namespace ThanksCardRepository {
+// 	export async function findMany() {
+// 		return await prisma.thanksCard.findMany({
+// 			include: {
+// 				from: true,
+// 				to: true,
+// 			},
+// 		});
+// 	}
 
-	export async function findUnique(id: string) {
-		return await prisma.thanksCard.findUnique({
-			include: {
-				from: true,
-				to: true,
-			},
-			where: {
-				id: id,
-			},
-		});
-	}
-}
-
-// length で一件だけ取得
+// 	export async function findUnique(id: string) {
+// 		return await prisma.thanksCard.findUnique({
+// 			include: {
+// 				from: true,
+// 				to: true,
+// 			},
+// 			where: {
+// 				id: id,
+// 			},
+// 		});
+// 	}
+// }

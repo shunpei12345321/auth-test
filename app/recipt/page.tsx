@@ -1,40 +1,27 @@
-"use client";
+// import Image from "next/image";
+// import styles from "./page.module.css";
+// import Link from "next/link";
 
-//import { useEffect, useState } from 'react'
+// import ThanksCardList from "./_components/recipt-list";
+// import { ThanksCardRepository } from "@/app/_repositories/ThanksCard";
 
-import useSWR from "swr";
-import type { SWRConfiguration } from "swr";
+// export const dynamic = "force-dynamic";
 
-import UserList from "@/app/user/_components/user-list";
-import type { UserWithRoleDepartment } from "@/app/_repositories/User";
-import { fetcher } from "@/app/_utils/fetcher";
-import { main } from "ts-node/dist/bin";
+// export default async function Home() {
+// 	const thanks_cards = await ThanksCardRepository.findMany();
+// 	return (
+// 		<main className={styles.main}>
+// 			<div className={styles.description}>
+// 				{/* <p>
+// 					Get started by editing&nbsp;
+// 					<code className={styles.code}>app/page.tsx</code>
+// 				</p> */}
+// 				<div>
+// 					<ThanksCardList thanks_cards={thanks_cards} />
+// 				</div>
+// 			</div>
 
-export default function RevalidateData() {
-	const config: SWRConfiguration = {
-		// 5000ミリ秒(5秒)間隔で API をポーリングし、データが更新されていれば、
-		// データを再取得し、画面に再描画される。
-		refreshInterval: 5000,
-
-		// fallbackDataでサーバー側でレンダリング(SSR)する際のデータを指定できる。
-		// サーバーでレンダリングされたHTMLをブラウザが読み込んで表示するので、APIをリクエストする前に表示が完了する。
-		// https://swr.vercel.app/ja/docs/with-nextjs#pre-rendering-with-default-data
-		fallbackData: [],
-	};
-	const { data: users } = useSWR<UserWithRoleDepartment[]>(
-		"/api/user",
-		fetcher,
-		config
-	);
-
-	// users がまだ取得できていなければ、画面描画を行わない。
-	if (!users) return;
-
-	return (
-		<main>
-			<div>const today</div>
-			<div></div>
-			<input type="date"></input>
-		</main>
-	);
-}
+// 			<div className={styles.grid}></div>
+// 		</main>
+// 	);
+// }
