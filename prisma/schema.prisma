@@ -40,6 +40,7 @@ model Session {
   user         User     @relation(fields: [userId], references: [id])
 }
 
+
 model User {
   id            String    @id @default(cuid())
   name          String?
@@ -103,6 +104,7 @@ model Department {
   users User[]
 }
 
+
 model Header {
   id            String    @id @default(cuid())
   header_attr1  String
@@ -120,3 +122,4 @@ model Item {
   // Header が削除されたときに、紐づく Item も削除するために onDelete: Cascade を指定している。
   header  Header  @relation(fields: [headerId], references: [id], onDelete: Cascade)
 }
+

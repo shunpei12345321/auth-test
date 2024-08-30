@@ -47,7 +47,6 @@ export default function UserForm(props: Props) {
 	} else {
 		mode = "create";
 	}
-
 	const [postError, setPostError] = React.useState<string>();
 	const {
 		register,

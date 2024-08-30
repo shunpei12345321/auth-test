@@ -71,6 +71,7 @@ export default function UserList(props: Props) {
 									<TableCell>{user.email}</TableCell>
 									<TableCell>{user.role.name}</TableCell>
 									<TableCell>{user.department.name}</TableCell>
+
 									<TableCell>
 										<Link href={`/user/edit/${user.id}`} passHref>
 											<Button variant="contained" color="primary">

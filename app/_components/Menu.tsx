@@ -33,12 +33,12 @@ export const mainMenu = (
 				<ListItemText primary="User" />
 			</ListItemButton>
 		</Link>
-		<Link href="/header-items-form" passHref>
+		<Link href="/recipt" passHref>
 			<ListItemButton>
 				<ListItemIcon>
 					<BarChartIcon />
 				</ListItemIcon>
-				<ListItemText primary="Header Items Form" />
+				<ListItemText primary="recipt" />
 			</ListItemButton>
 		</Link>
 		{/* <Link href="/header-items-list" passHref>
@@ -57,31 +57,14 @@ export const mainMenu = (
 				<ListItemText primary="Revalidate Data" />
 			</ListItemButton>
 		</Link> */}
-		{/* <Link href="/revalidate-data-custom-hook" passHref>
-			<ListItemButton>
-				<ListItemIcon>
-					<BarChartIcon />
-				</ListItemIcon>
-				<ListItemText primary="Revalidate Data Custom Hook" />
-			</ListItemButton>
-		</Link> */}
-		{/* file-uppuloader */}
-		{/* <Link href="/file-uploader" passHref>
-			<ListItemButton>
-				<ListItemIcon>
-					<LayersIcon />
-				</ListItemIcon>
-				<ListItemText primary="file-uploader" />
-			</ListItemButton>
-		</Link> */}
-		<Link href="/camera-photo-uploader" passHref>
+		{/* <Link href="/camera-photo-uploader" passHref>
 			<ListItemButton>
 				<ListItemIcon>
 					<CameraIcon />
 				</ListItemIcon>
 				<ListItemText primary="camera-photo" />
 			</ListItemButton>
-		</Link>
+		</Link> */}
 		{/*qr-code-reader:QRコード関連 */}
 		{/* <Link href='/qr-code-reader' passHref>
       <ListItemButton>
@@ -99,14 +82,14 @@ export const mainMenu = (
         <ListItemText primary='zxing-barcode-reader' />
       </ListItemButton>
     </Link> */}
-		<Link href="/activereports" passHref>
+		{/* <Link href="/activereports" passHref>
 			<ListItemButton>
 				<ListItemIcon>
 					<ReceiptLongIcon />
 				</ListItemIcon>
 				<ListItemText primary="ActiveReports" />
 			</ListItemButton>
-		</Link>
+		</Link> */}
 		{/* <Link href="/leader-line" passHref>
 			<ListItemButton>
 				<ListItemIcon>
@@ -136,7 +119,7 @@ export const mainMenu = (
 
 export const secondaryMenu = (
 	<React.Fragment>
-		<ListSubheader component="div" inset>
+		{/* <ListSubheader component="div" inset>
 			Secondary Menu
 		</ListSubheader>
 		<ListItemButton>
@@ -150,7 +133,7 @@ export const secondaryMenu = (
 				<AssignmentIcon />
 			</ListItemIcon>
 			<ListItemText primary="Secondary Menu 2" />
-		</ListItemButton>
+		</ListItemButton> */}
 		{/* <ListItemButton>
 			<ListItemIcon>
 				<AssignmentIcon />
