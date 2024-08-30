@@ -88,7 +88,7 @@ export default function UserList(props: Props) {
 										</Button>
 									</TableCell>
 									<TableCell>
-										<Link href={`/user/check/${user.id}`} passHref>
+										<Link href={`/user/check/`} passHref>
 											<Button variant="contained" color="primary">
 												move
 											</Button>

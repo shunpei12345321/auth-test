@@ -8,16 +8,9 @@ import UserList from "@/app/user/_components/user-list";
 // user list からインポート　　view user
 
 export default function UserPage() {
-	const { data: users } = useSWR<UserWithRoleDepartment[]>(
-		"/api/user/",
-		fetcher
-	);
-
-	if (!users) return;
-
 	return (
 		<>
-			<UserList users={users} />
+			<div>ssss</div>
 		</>
 	);
 }
