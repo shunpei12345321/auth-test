@@ -83,42 +83,38 @@ export default function UserList(props: Props) {
 						</TableRow>
 					</TableHead>
 					<TableBody>
-						{/* users 全件をテーブル出力する */}
-						{users.map((user) => {
-							return (
-								/* 一覧系の更新箇所を特定するために一意となる key を設定する必要がある */
-								<TableRow key={user.id}>
-									<TableCell>{user.id}</TableCell>
-									<TableCell>{user.name}</TableCell>
-									<TableCell>{user.email}</TableCell>
-									<TableCell>{user.role.name}</TableCell>
-									<TableCell>{user.department.name}</TableCell>
+						{users.map((user) => (
+							<TableRow key={user.id}>
+								<TableCell>{user.id}</TableCell>
+								<TableCell>{user.name}</TableCell>
+								<TableCell>{user.email}</TableCell>
+								<TableCell>{user.role.name}</TableCell>
+								<TableCell>{user.department.name}</TableCell>
 
-									<TableCell>
-										<Link href={`/user/edit/${user.id}`} passHref>
-											<Button variant="contained" color="primary">
-												Edit
-											</Button>
-										</Link>
-									</TableCell>
-									<TableCell>
-										<Button
-											onClick={() => onDelete(user.id)}
-											variant="contained"
-											color="warning">
-											Delete
+								<TableCell>
+									<Link href={`/user/edit/${user.id}`} passHref>
+										<Button variant="contained" color="primary">
+											Edit
 										</Button>
-									</TableCell>
-									<TableCell>
-										<Link href={`/user/check/`} passHref>
-											<Button variant="contained" color="primary">
-												move
-											</Button>
-										</Link>
-									</TableCell>
-								</TableRow>
-							);
-						})}
+									</Link>
+								</TableCell>
+								<TableCell>
+									<Button
+										onClick={() => onDelete(user.id)}
+										variant="contained"
+										color="warning">
+										Delete
+									</Button>
+								</TableCell>
+								<TableCell>
+									<Link href={`/user/check/`} passHref>
+										<Button variant="contained" color="primary">
+											move
+										</Button>
+									</Link>
+								</TableCell>
+							</TableRow>
+						))}
 					</TableBody>
 				</Table>
 			</div>
