@@ -23,4 +23,4 @@ export default function UserPage() {
 }
 
 //8.9pull した後だけでnpm install だけで動くかチェック
-//
+//8.10 pull した後　npm install だけで　パッケージがインストールできた
