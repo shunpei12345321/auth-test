@@ -14,6 +14,7 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 
 import { useRouter } from "next/navigation";
 import { mutate } from "swr";
+import { getSession } from "next-auth/react";
 
 import type { UserWithRoleDepartment } from "@/app/_repositories/User";
 import { idText } from "typescript";
@@ -24,16 +25,37 @@ type Props = {
 
 export default function UserList(props: Props) {
 	const users = props.users;
-
 	const router = useRouter();
 
 	const onDelete = async (id: string) => {
-		const response = await fetch(`/api/user/${id}`, {
-			method: "DELETE",
-		});
-		mutate("/api/user");
-		router.refresh();
+		// セッションから現在のユーザーIDを取得
+		const session = await getSession();
+		const currentUserId = session?.user?.id;
+
+		if (currentUserId === id) {
+			const response = await fetch(`/api/user/${id}`, {
+				method: "DELETE",
+			});
+
+			if (response.ok) {
+				mutate("/api/user");
+				router.refresh();
+			} else {
+				// エラーハンドリング
+				console.error("Failed to delete the user");
+			}
+		} else {
+			// ユーザーIDが一致しない場合、削除を許可しない
+			alert("You can only delete your own account.");
+		}
 	};
+
+	// 	const response = await fetch(`/api/user/${id}`, {
+	// 		method: "DELETE",
+	// 	});
+	// 	mutate("/api/user");
+	// 	router.refresh();
+	// };
 
 	// 自分で追加したものしかけせない
 	//  DELETE /api/user/clzm0tb6x000am75pjg8ydpg4 　%78こういうエラーはフロント側
