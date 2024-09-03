@@ -96,8 +96,8 @@ const handler = NextAuth({
 	// サインイン・サインアウトで飛ぶカスタムログインページを指定
 
 	// pages: {
-	// 	signIn: "/login",
-	// 	signOut: "/login",
+	// 	signIn: "/user",
+	// 	signOut: "/user",
 	// },
 
 	// Enable debug messages in the console if you are having problems

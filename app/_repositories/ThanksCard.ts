@@ -13,7 +13,7 @@ export namespace ThanksCardRepository {
 		return await prisma.thanksCard.findMany({
 			include: {
 				from: true,
-				to: true,
+				// to: true,
 			},
 		});
 	}
